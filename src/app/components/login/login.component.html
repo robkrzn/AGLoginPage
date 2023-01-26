@@ -33,7 +33,8 @@
           </mat-error>
         </mat-form-field>
         </div>
-        <button mat-flat-button color="primary" class="m-3">{{buttonText}}</button>
+        <button mat-flat-button color="primary" class="m-3" *ngIf="!createAccount"><mat-icon>login</mat-icon> Prihlásiť</button>
+        <button mat-flat-button color="primary" class="m-3"  *ngIf="createAccount"><mat-icon>person_add</mat-icon> Vytvoriť účet</button>
       </form>
 
 

@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
 
   @Input() createAccount: boolean = false;
   titleText: string = 'Prihlásenie od Vášho účtu';
-  buttonText: string = 'Prihlásiť';
 
   constructor(
     private fb: FormBuilder, 
@@ -55,7 +54,6 @@ export class LoginComponent implements OnInit {
   setTextPlaces() {
     if (this.createAccount) {
       this.titleText = 'Vytvorenie nového účtu';
-      this.buttonText = 'Vytvoriť účet';
     }
   }
 
