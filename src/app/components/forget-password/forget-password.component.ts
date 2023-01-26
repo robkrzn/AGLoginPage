@@ -25,7 +25,7 @@ export class ForgetPasswordComponent {
     if (!this.emailForm.valid) {
       return;
     }
-    this.snackBar.open('Na zadaný email bolo odoslané nové heslo.','', { duration: 2000, });
+    this.snackBar.open('Na zadaný email bolo odoslané nové heslo. 📫','', { duration: 2000, });
     this.router.navigate(['/']);
   }
 

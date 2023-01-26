@@ -43,11 +43,11 @@ export class LoginComponent implements OnInit {
       return;
     }
     if(this.createAccount){
-      this.snackBar.open('Účet bol úspešne vytvorený.','', { duration: 2000, });
+      this.snackBar.open('Účet bol úspešne vytvorený. ✌','', { duration: 2000, });
       this.router.navigate(['/']);
       return;
     }
-    this.snackBar.open('Prihlásenie bolo úspešné.','', { duration: 2000, });
+    this.snackBar.open('Prihlásenie bolo úspešné. 👍','', { duration: 2000, });
     this.router.navigate(['/home']);
     console.log(this.loginForm.value);
   }

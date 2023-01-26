@@ -1,1 +1,78 @@
-<h1>Home page</h1>
+<mat-card>
+    <mat-card-content>
+        <div class="header">
+            <p class="h6 m-2 mb-5">Vytajte na domácej obrazovke</p>
+            <h3>Toto sú naše dáta</h3>
+        </div>
+
+
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Jeden
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Dáta o jazde {{panelOpenState1 ? 'otvorené' : 'zatvorené'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>Jazda prebiehala hladko.</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState2 = true" (closed)="panelOpenState2 = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Druhý
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Dáta o jazde {{panelOpenState2 ? 'otvorené' : 'zatvorené'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>Táto jazda neprebiehala až tak hladko.</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState3 = true" (closed)="panelOpenState3 = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Tretí
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Dáta o jazde {{panelOpenState3 ? 'otvorené' : 'zatvorené'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>Jazda prebiehala hladko.</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState4 = true" (closed)="panelOpenState4 = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Štvrtý
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Dáta o jazde {{panelOpenState4 ? 'otvorené' : 'zatvorené'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>Táto jazda neprebiehala až tak hladko.</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState5 = true" (closed)="panelOpenState5 = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Piaty
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Dáta o jazde {{panelOpenState5 ? 'otvorené' : 'zatvorené'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>Jazda prebiehala hladko.</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState6 = true" (closed)="panelOpenState6 = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Šiesty
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Dáta o jazde {{panelOpenState6 ? 'otvorené' : 'zatvorené'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>Táto jazda neprebiehala až tak hladko.</p>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card-content>
+</mat-card>
