@@ -1,8 +1,7 @@
-<H1></H1>
 <mat-card>
     <mat-card-content>
       <div class="header">
-        <P class="h6 m-2">Prihlásenie od Vášho účtu</P>
+        <p class="h6 m-2">{{titleText}}</p>
       </div>
       <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
         <div class="emailInput">
@@ -34,12 +33,16 @@
           </mat-error>
         </mat-form-field>
         </div>
-        <button mat-flat-button color="primary" class="m-3">Prihlásiť</button>
+        <button mat-flat-button color="primary" class="m-3">{{buttonText}}</button>
       </form>
 
-      <div class="button-row">
-        <a class="aLink-right" routerLink="#">Zabudnuté heslo?</a>
-        <a class="aLink-left"  routerLink="#">Vytvoriť nový účet</a>
+
+      <div *ngIf="!createAccount" class="button-row">
+        <a class="aLink-right" routerLink="/forgottenPassword">Zabudnuté heslo?</a>
+        <a class="aLink-left"  routerLink="/createAccount">Vytvoriť nový účet</a>
+      </div>
+      <div *ngIf="createAccount" class="button-row">
+        <a class="aLink-left" routerLink="/">Prihlásiť sa</a>
       </div>
     </mat-card-content>
   </mat-card>

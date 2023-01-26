@@ -17,13 +17,21 @@ import { LoginComponent } from './components/login/login.component';
 //views
 import { HomeComponent } from './views/home/home.component';
 import { AboutComponent } from './views/about/about.component';
+import { CreateAccountComponent } from './views/create-account/create-account.component';
+import { ForgottenPasswordComponent } from './views/forgotten-password/forgotten-password.component';
+import { LoginPageComponent } from './views/login-page/login-page.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    CreateAccountComponent,
+    ForgottenPasswordComponent,
+    LoginPageComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,
