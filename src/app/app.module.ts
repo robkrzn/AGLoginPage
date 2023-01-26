@@ -21,6 +21,7 @@ import { CreateAccountComponent } from './views/create-account/create-account.co
 import { ForgottenPasswordComponent } from './views/forgotten-password/forgotten-password.component';
 import { LoginPageComponent } from './views/login-page/login-page.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
     CreateAccountComponent,
     ForgottenPasswordComponent,
     LoginPageComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +49,7 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
     MatInputModule,
     ReactiveFormsModule,
     MatIconModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

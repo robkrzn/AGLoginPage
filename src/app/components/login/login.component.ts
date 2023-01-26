@@ -1,5 +1,7 @@
 import { Component, InjectionToken, OnInit, Input } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms'
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 
 //export const titleText = new InjectionToken<String>('titleText');
@@ -8,21 +10,23 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms'
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  providers:[
+  providers: [
   ]
 })
 export class LoginComponent implements OnInit {
   hide: boolean = true;
-  createAcout : boolean = false;
+  createAcout: boolean = false;
 
   @Input() createAccount: boolean = false;
-  titleText: string ='Prihlásenie od Vášho účtu';
+  titleText: string = 'Prihlásenie od Vášho účtu';
   buttonText: string = 'Prihlásiť';
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder, 
+    private router: Router,
     
-  }
-  
+    private snackBar: MatSnackBar) {}
+
 
   ngOnInit() {
     this.setTextPlaces();
@@ -38,14 +42,21 @@ export class LoginComponent implements OnInit {
     if (!this.loginForm.valid) {
       return;
     }
+    if(this.createAccount){
+      this.snackBar.open('Účet bol úspešne vytvorený.','', { duration: 2000, });
+      this.router.navigate(['/']);
+      return;
+    }
+    this.snackBar.open('Prihlásenie bolo úspešné.','', { duration: 2000, });
+    this.router.navigate(['/home']);
     console.log(this.loginForm.value);
   }
 
-  setTextPlaces(){
-      if(this.createAccount){
-        this.titleText = 'Vytvorenie nového účtu';
-        this.buttonText = 'Vytvoriť účet';
-      }
+  setTextPlaces() {
+    if (this.createAccount) {
+      this.titleText = 'Vytvorenie nového účtu';
+      this.buttonText = 'Vytvoriť účet';
+    }
   }
 
 }
