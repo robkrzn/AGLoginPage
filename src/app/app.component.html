@@ -1,3 +1,30 @@
 <div class="content-body">
+  <mat-card>
+    <mat-card-content>
+      <div class="header">
+        <p class="h6 m-2">Prihlásenie požívateľa pomocou Microsoft účtu</p>
+      </div>
+
+      <div class="m-4 d-flex justify-content-center">
+        <div *ngIf="!isLoggedIn()" class="col-md-4"><button mat-flat-button color="primary" (click)="login()">MS
+            Prihlásenie</button></div>
+        <div *ngIf="isLoggedIn()" class="col-md-4"><button mat-flat-button color="warn" (click)="logout()">MS
+            Odhlásenie</button></div>
+      </div>
+
+      <div *ngIf="isLoggedIn()">
+        <h3>Prihlásený používateľ</h3>
+      </div> 
+      <div *ngIf="!isLoggedIn()">
+        <h3>Neprihlásený používateľ</h3>
+      </div>
+
+      <div *ngIf="isLoggedIn()">
+        <app-home></app-home>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+
   <router-outlet></router-outlet>
 </div>

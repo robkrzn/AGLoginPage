@@ -15,7 +15,7 @@ mat-card {
     min-height: 100%;
     padding: 60px 1rem;
     //background: radial-gradient(circle at top,lighten($nextItColor,10%), darken($nextItColor, 10%));
-    background: linear-gradient(45deg, lighten(blue,20%), darken($nextItColor, 10%));
+    background: linear-gradient(45deg, lighten(blue,35%), $nextItColor);
     display: block;
 }
 
@@ -40,6 +40,5 @@ mat-card {
 @media only screen and (min-width: 600px) { 
     mat-card {
         max-width: 600px;
-        max-height: 600px;
     }
 }
